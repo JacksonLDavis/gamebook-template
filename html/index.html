@@ -12,8 +12,29 @@
 </head>
 
 <body>
-    <h1>Gamebook Template</h1>
-    <p>Work in progress</p>
+    <div class="header">
+        <h1>Gamebook Template</h1>
+        <p>Work in progress</p>
+    </div>
+
+    <div class="gamebook-container">
+        <div class="page" id="intro">
+            <p>The story begins here...</p>
+            <p>Sample page text.</p>
+            <button class="option-button" onclick="showPage('option-1')">Option 1</button>
+            <button class="option-button" onclick="showPage('option-2')">Option 2</button>
+        </div>
+
+        <div class="page" id="option-1">
+            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
+            <p>You took Option 1.</p>
+        </div>
+
+        <div class="page" id="option-2">
+            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
+            <p>You took Option 2.</p>
+        </div>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>

@@ -1,6 +1,42 @@
 /* Code written by Jackson L. Davis */
 
+
+/* Regular Elements */
+
 html {
     height: 100%;
     width: 100%;
 }
+
+* {
+    font-family: arial, sans-serif;
+}
+
+body {
+    background: silver;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* Class Elements */
+
+.gamebook-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
+
+.page {
+    display: none; /* JavaScript will change the current page to display: block; */
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
+
+
+/* Custom ID Elements */
