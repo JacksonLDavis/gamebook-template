@@ -20,6 +20,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-size: 20px;
+}
+
 
 /* Class Elements */
 
@@ -36,6 +40,12 @@ h1 {
     width: 100%;
     height: auto;
     object-fit: scale-down;
+}
+
+.previous-page-button, .option-button, .start-over-button {
+    width: 100%;
+    font-size: 20px;
+    height: 36px;
 }
 
 

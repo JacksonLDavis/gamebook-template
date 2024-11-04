@@ -14,7 +14,6 @@
 <body>
     <div class="header">
         <h1>Gamebook Template</h1>
-        <p>Work in progress</p>
     </div>
 
     <div class="gamebook-container">
@@ -28,6 +27,7 @@
         Replace each 'OP#' with the page ID you want the button to lead to, and make a new page with that ID.
         Replace each "Option #" with text describing what action you can take.
         You can have as many or as few option buttons as you like.
+        Use the start over button for endings only. Otherwise, remove it.
         -->
 
         <!-- TEMPLATE PAGE CODE BEGINS HERE -->
@@ -39,6 +39,8 @@
             <button class="option-button" onclick="showPage('OP2')">Option 2</button>
             <button class="option-button" onclick="showPage('OP3')">Option 3</button>
             <button class="option-button" onclick="showPage('OP4')">Option 4</button>
+
+            <button class="start-over-button" onclick="showPage('intro')">Start Over</button>
         </div>
         <!-- TEMPLATE PAGE CODE ENDS HERE-->
 
@@ -71,6 +73,7 @@
             <button class="previous-page-button" onclick="showPage('read-example-story')">Previous Page</button>
             <p>You decide to go back to where you were. You don't accomplish anything.</p>
             <p>Ending 1</p>
+            <button class="start-over-button" onclick="showPage('intro')">Start Over</button>
         </div>
 
         <div class="page" id="keep-going">
@@ -87,18 +90,21 @@
             <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
             <p>You stay put. Unfortunately, staying put doesn't do much for you.</p>
             <p>Ending 2</p>
+            <button class="start-over-button" onclick="showPage('intro')">Start Over</button>
         </div>
 
         <div class="page" id="run">
             <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
             <p>You run as fast as you can. After running for about five minutes, you are tired. They catch up to you. Oh no!</p>
             <p>Ending 3</p>
+            <button class="start-over-button" onclick="showPage('intro')">Start Over</button>
         </div>
 
         <div class="page" id="sneak">
             <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
             <p>You sneak away. They somehow don't even notice you leave. You get back to safety.</p>
             <p>Ending 4</p>
+            <button class="start-over-button" onclick="showPage('intro')">Start Over</button>
         </div>
 
     </div>
