@@ -18,22 +18,89 @@
     </div>
 
     <div class="gamebook-container">
+
+        <!--
+        Copy the "tempalte" page code below and paste it inside of the "gamebook-container" div.
+        Replace "template" with whatever ID you like.
+        Replace 'PREV' with the ID of the previous page.
+        Modify the paragraphs to write your story.
+        You can have as many or as few paragraphs as you like.
+        Replace each 'OP#' with the page ID you want the button to lead to, and make a new page with that ID.
+        Replace each "Option #" with text describing what action you can take.
+        You can have as many or as few option buttons as you like.
+        -->
+
+        <!-- TEMPLATE PAGE CODE BEGINS HERE -->
+        <div class="page" id="template">
+            <button class="previous-page-button" onclick="showPage('PREV')">Previous Page</button>
+            <p>This is what the typical page will look like.</p>
+            <p>Sample paragraph.</p>
+            <button class="option-button" onclick="showPage('OP1')">Option 1</button>
+            <button class="option-button" onclick="showPage('OP2')">Option 2</button>
+            <button class="option-button" onclick="showPage('OP3')">Option 3</button>
+            <button class="option-button" onclick="showPage('OP4')">Option 4</button>
+        </div>
+        <!-- TEMPLATE PAGE CODE ENDS HERE-->
+
+        <!-- INTRO PAGE CODE BEGINS HERE -->
         <div class="page" id="intro">
+            <p>Welcome to the Gamebook Template.</p>
+            <p>Select "How to use" to see how to use this template, or click "Read Example Story" to see an example of this template being used.</p>
+            <button class="option-button" onclick="showPage('how-to-use')">How to use</button>
+            <button class="option-button" onclick="showPage('read-example-story')">Read Example Story</button>
+        </div>
+        <!-- INTRO PAGE CODE ENDS HERE -->
+
+        <div class="page" id="how-to-use">
+            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
+            <p>Open up index.html in a text editor. Not too far down, you will find code for a "template" page. Below that, you will find code for the "intro" page. Both pages work the same except that the "intro" page does not use a previous page button because it is the first page that is shown.</p>
+            <p>Further instructions for how to use this template are left as comments in the code.</p>
+        </div>
+
+        <div class="page" id="read-example-story">
+            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
             <p>The story begins here...</p>
-            <p>Sample page text.</p>
-            <button class="option-button" onclick="showPage('option-1')">Option 1</button>
-            <button class="option-button" onclick="showPage('option-2')">Option 2</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque commodo massa, in volutpat nunc lacinia quis. Mauris et elementum sem, sed feugiat dolor. Vivamus laoreet sodales tincidunt. Donec convallis enim ut lacinia vestibulum. Donec sed nisl eu sem ultrices aliquam eu in sem. Morbi vel gravida augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean vulputate, leo a pellentesque fermentum, massa libero sodales nibh, ut malesuada libero diam et odio. Aenean at velit ac diam gravida sagittis fringilla id sem.</p>
+            <p>Donec gravida arcu et eros efficitur, ut efficitur erat pretium. Sed sit amet ante orci. Maecenas ut tortor dapibus, efficitur tellus ac, auctor mauris. Phasellus et luctus nulla, vitae sagittis leo. In commodo magna purus, auctor auctor eros commodo id. Morbi congue malesuada elit, nec lobortis ex suscipit nec. Ut feugiat sagittis urna vel pellentesque. Donec blandit augue vel risus viverra porttitor. Suspendisse pretium porta nunc ut scelerisque. Vivamus rhoncus hendrerit ipsum.</p>
+            <p>Phasellus justo justo, fermentum at ex sed, tempor malesuada nisi. Aliquam sodales nulla a tempor sodales. Donec consequat elit nec sem ultrices malesuada. Phasellus ut dui ornare, vestibulum libero vel, vulputate purus. Ut faucibus rhoncus cursus. Suspendisse vitae massa tempus, fermentum nibh ac, auctor est. Etiam eu nulla in risus semper finibus. Suspendisse at malesuada sem. Nullam dignissim dui id lorem laoreet, tempus tincidunt lorem porttitor. In in porttitor enim, vel congue eros.</p>
+            <button class="option-button" onclick="showPage('go-back-to-where-you-were')">Go Back to Where You Were</button>
+            <button class="option-button" onclick="showPage('keep-going')">Keep Going</button>
         </div>
 
-        <div class="page" id="option-1">
-            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
-            <p>You took Option 1.</p>
+        <div class="page" id="go-back-to-where-you-were">
+            <button class="previous-page-button" onclick="showPage('read-example-story')">Previous Page</button>
+            <p>You decide to go back to where you were. You don't accomplish anything.</p>
+            <p>Ending 1</p>
         </div>
 
-        <div class="page" id="option-2">
-            <button class="previous-page-button" onclick="showPage('intro')">Previous Page</button>
-            <p>You took Option 2.</p>
+        <div class="page" id="keep-going">
+            <button class="previous-page-button" onclick="showPage('read-example-story')">Previous Page</button>
+            <p>You decide to keep going.</p>
+            <p>Ut hendrerit sodales mi, a accumsan libero cursus nec. Duis id nibh id felis malesuada tempor. Donec sit amet enim mattis, viverra nisi sit amet, cursus erat. Nulla vel lacus suscipit, scelerisque ante quis, posuere mi. Vestibulum vel libero tortor. Suspendisse potenti. Morbi elit purus, vulputate placerat ante vel, porta luctus felis. Aliquam erat volutpat. Curabitur massa tellus, convallis auctor hendrerit et, fringilla sed ipsum. Curabitur efficitur enim erat, tempus pellentesque purus porttitor sed. Phasellus sed lorem metus.</p>
+            <p>Suspendisse luctus pretium risus, non lacinia mauris condimentum nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras dignissim felis ligula, sit amet vestibulum magna laoreet in. Curabitur ultricies congue ultricies. Nulla congue urna id ligula vehicula ultrices. Etiam ullamcorper vulputate mollis. Nullam sit amet imperdiet orci, eget mollis massa. Ut finibus blandit sem, a rhoncus nulla vulputate imperdiet. Vivamus euismod ullamcorper erat, et pulvinar justo elementum vel. Nam tellus leo, placerat at lectus sed, dictum semper ante.</p>
+            <button class="option-button" onclick="showPage('stay-put')">Stay Put</button>
+            <button class="option-button" onclick="showPage('run')">Run!!!</button>
+            <button class="option-button" onclick="showPage('sneak')">Try to Sneak Away</button>
         </div>
+
+        <div class="page" id="stay-put">
+            <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
+            <p>You stay put. Unfortunately, staying put doesn't do much for you.</p>
+            <p>Ending 2</p>
+        </div>
+
+        <div class="page" id="run">
+            <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
+            <p>You run as fast as you can. After running for about five minutes, you are tired. They catch up to you. Oh no!</p>
+            <p>Ending 3</p>
+        </div>
+
+        <div class="page" id="sneak">
+            <button class="previous-page-button" onclick="showPage('keep-going')">Previous Page</button>
+            <p>You sneak away. They somehow don't even notice you leave. You get back to safety.</p>
+            <p>Ending 4</p>
+        </div>
+
     </div>
 
     <script src="../js/script.js"></script>
